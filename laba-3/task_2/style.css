@@ -1,0 +1,53 @@
+
+/* Селектор тегів для заголовка h1 */
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: navy;
+    text-shadow: 3px 3px 5px lightgray;
+    letter-spacing: 2px;
+}
+
+/* Селектор для загальних абзаців і блочних елементів (стилі залишені з завдання 1) */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* Селектор класу для червоного тексту */
+.red {
+    color: red;
+}
+
+/* Селектор класу для першого абзацу без перенесення рядка */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Селектор для абзацу з ідентифікатором */
+#italic-bold {
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 5px -5px 3px orange;
+}
+
+/* Селектор класу для текстової тіні */
+.shadow {
+    text-shadow: 5px -5px 3px orange;
+}
+
+/* Селектор для 1-го блочного елемента */
+.block-1 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+/* Селектор для 2-го блочного елемента */
+.block-2 {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
