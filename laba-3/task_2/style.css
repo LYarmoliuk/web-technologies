@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.day {
+    margin: 5px 0;
+}
+
+.schedule {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.schedule div {
+    width: 45%;
+}
+
+img {
+    height: auto;
+    /* Зберігаємо пропорції зображення */
+    width: 100%;
+    /* Ширина на 100% для мобільних пристроїв */
+    max-width: 750px;
+    /* Максимальна ширина для більших екранів */
+}
+
+.image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    /* Прибираємо зайві відступи зліва і справа */
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    /* Прибираємо стандартні маркери */
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "*";
+    /* Виводимо зірочку перед кожним елементом */
+    color: black;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 600px) {
+    .header {
+        font-size: 1.5em;
+        /* Зменшуємо шрифт заголовка */
+    }
+
+    .schedule {
+        flex-direction: column;
+        /* Змінюємо на стовпчик для мобільних */
+        align-items: center;
+        /* Центруємо контент */
+        width: 100%;
+        /* Ширина на 100% для мобільних пристроїв */
+    }
+
+    .schedule div {
+        width: 100%;
+        /* Змінюємо ширину на 100% */
+        margin-bottom: 10px;
+        /* Додаємо відступ між блоками */
+        padding: 10px;
+        /* Додаємо внутрішній відступ для кращого вигляду */
+        box-sizing: border-box;
+        /* Включаємо padding в загальну ширину */
+    }
+
+    img {
+        width: 100%;
+        /* Зберігаємо 100% ширини для зображень */
+    }
+
+    table {
+        font-size: 14px;
+        /* Зменшуємо розмір шрифту таблиці */
+        width: 100%;
+        /* Ширина на 100% для таблиці */
+    }
+
+    th,
+    td {
+        padding: 8px;
+        /* Зменшуємо відступи в таблиці */
+    }
+}
