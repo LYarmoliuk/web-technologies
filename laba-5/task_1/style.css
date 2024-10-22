@@ -1,0 +1,83 @@
+/* Загальні стилі для div */
+.plan {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+    border: 5px solid black;
+}
+
+/* Стилі для заголовку h1 */
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    margin: 10px 0;
+}
+
+/* Стилі для першого рівня списку */
+.first-level {
+    background-color: rgb(103, 153, 128);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 3px solid black;
+}
+
+/* Стилі для другого рівня списку */
+.second-level {
+    background-color: rgb(153, 180, 60);
+    margin: 10px 0 0 40px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Стилі для іконок */
+.material-icons {
+    vertical-align: middle;
+    margin-right: 10px;
+    color: black;
+}
+
+/* Стилі для елементів 1-го рівня */
+.first-level > li {
+    margin: 20px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+/* Стилі для елементів 2-го рівня */
+.second-level > li {
+    background-color: rgb(153, 180, 60);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Стилі для тексту категорій */
+.category {
+    display: inline-block;
+    font-weight: 700;
+    background-color: rgb(199, 124, 105);
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Стилі для елементів 2-го рівня */
+.item {
+    font-weight: 700;
+    background-color: rgb(199, 124, 105);
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Стилі для іконок у маркованому списку */
+li span.material-icons {
+    margin-right: 10px;
+    color: black;
+}
