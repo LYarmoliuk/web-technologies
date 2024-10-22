@@ -1,0 +1,36 @@
+/* Стилізація таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Стилізація заголовків таблиці */
+th {
+    background-color: #b03a2e; /* Найтемніший відтінок */
+    color: white;
+    padding: 10px;
+}
+
+/* Стилізація рядків таблиці */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Відтінки для кожного стовпця (від темнішого до світлішого) */
+thead th:nth-child(2), tbody td:nth-child(2) {
+    background-color: #e59866;
+}
+
+thead th:nth-child(3), tbody td:nth-child(3) {
+    background-color: #f5b7b1;
+}
+
+thead th:nth-child(4), tbody td:nth-child(4) {
+    background-color: #f9e79f;
+}
+
+thead th:nth-child(5), tbody td:nth-child(5) {
+    background-color: #fad7a0;
+}
