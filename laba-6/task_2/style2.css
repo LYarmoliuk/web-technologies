@@ -1,0 +1,125 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль обгортки */
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стиль Header */
+header {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.logo {
+    float: left;
+}
+.logo img {
+    max-width: 100px;
+}
+.menu {
+    float: right;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    display: inline;
+    margin-right: 10px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Стиль для блоків */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.block {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Блоки з зеленими заокругленими рамками */
+.block3 {
+    border: 5px solid green;
+    border-radius: 50px 150px;
+}
+.block2 {
+    border: 5px solid green;
+    border-radius: 80px 00px;
+}
+.block1 {
+    border: 5px solid green;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.block4 {
+    border: 10px solid;
+    border-color: green greenyellow green greenyellow;
+    border-radius: 20px;
+
+}
+
+.block5 {
+    border: 10px solid;
+    border-color: greenyellow green greenyellow green;
+    border-radius: 40px 0 40px 0;
+}
+
+.block6 {
+    border: 10px solid;
+    border-color: greenyellow greenyellow greenyellow green;
+    border-bottom-right-radius: 100%;
+}
+
+/* Блоки з оранжевими рамками та різними стилями */
+.block7 {
+    border: 10px solid;
+    border-image-source: url("2.1.png");
+    border-image-slice: 20;
+}
+
+.block8 {
+    border: 10px solid;
+    border-image-source: url("2.2.png");
+    border-image-slice: 20;
+}
+
+.block9 {
+    border: 10px solid;
+    border-image-source: url("2.3.png");
+    border-image-slice: 20;
+}
+
+.block10 {
+    border: 10px solid;
+    border-image-source: url("2.4.png");
+    border-image-slice: 30;
+}
+.block11 {
+    border: 10px solid;
+    border-image-source: url("2.5.png");
+    border-image-slice: 30;
+}
+.block12 {
+    border: 10px solid;
+    border-image-source: url("2.6.png");
+    border-image-slice: 30;
+}
