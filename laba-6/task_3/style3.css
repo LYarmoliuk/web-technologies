@@ -1,0 +1,94 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль обгортки */
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стиль Header */
+header {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.logo {
+    float: left;
+}
+.logo img {
+    max-width: 100px;
+}
+.menu {
+    float: right;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    display: inline;
+    margin-right: 10px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Стиль для блоків */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 20px;
+}
+
+
+.background1 {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    color: white;
+    background-color: #7a2207;
+    border-radius:40px;
+}
+
+.background2 {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    color: white;
+    background-color: #f76f45;
+    border-radius:40px;
+}
+
+.position {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.position1 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.background3 {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    color: white;
+    background-color: #c42e00;
+    border-radius:40px;
+}
+
+
