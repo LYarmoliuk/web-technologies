@@ -1,0 +1,117 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль обгортки */
+.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стиль Header */
+header {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.logo {
+    float: left;
+}
+.logo img {
+    max-width: 100px;
+}
+.menu {
+    float: right;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li {
+    display: inline;
+    margin-right: 10px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Стиль для блоків */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+}
+
+.position {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blocksh1, .blocksh2, .blocksh3, .blocksh4, .blocksh5, .blocksh6 {
+    height: 400px;
+    width: 300px; 
+    padding: 15px;
+    box-sizing: border-box; 
+    margin: 35px;
+    text-align: center;
+}
+
+.blocksh1 {
+    border: black solid 1px;
+    box-shadow: -15px -15px 5px rgba(249, 5, 160, 0.844);    
+}
+
+.blocksh2 {
+    border: black solid 1px;
+    box-shadow: 0 0 5px 15px rgba(249, 5, 160, 0.844);
+}
+
+.blocksh3 {    
+    border:  black solid 1px;
+    box-shadow: 5px 5px 15px rgba(249, 5, 160, 0.844);
+}
+
+.blocksh4 {
+    border: black solid 1px;
+    box-shadow: 0 0 15px 5px rgba(249, 5, 160, 0.844);    
+}
+
+.blocksh5 {
+    border: black solid 1px;
+    box-shadow:
+        5px 5px 5px rgba(255, 0, 0, 0.7),
+        /* Red shadow on bottom-right */
+        -5px -5px 5px rgba(0, 255, 0, 0.7),
+        /* Green shadow on top-left */
+        5px -5px 5px rgba(0, 0, 255, 0.7),
+        /* Blue shadow on top-right */
+        -5px 5px 5px rgba(255, 255, 0, 0.7);
+    /* Yellow shadow on bottom-left */   
+}
+
+.blocksh6 {
+    border: black solid 1px;
+    box-shadow:
+
+        0 -10px 5px rgba(251, 255, 0, 0.7),
+        0 10px 5px rgba(0, 0, 255, 0.7);
+    
+}
+
+
+.p1 {
+    text-align: center;
+}
+
+.img1 {
+    height: 200px;
+    width: 200px;
+}
