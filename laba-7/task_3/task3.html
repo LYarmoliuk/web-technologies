@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 id="form-title" class="form-title">Заповніть форму</h2>
+        <form action="#">
+            <div class="input-group">
+                <div class="input-item">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" name="login">
+                </div>
+                <div class="input-item">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="input-item">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="input-item">
+                    <label for="repeat-password">Repeat password</label>
+                    <input type="password" id="repeat-password" name="repeat-password">
+                </div>
+                <div class="input-item">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name">
+                </div>
+                <div class="input-item">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name">
+                </div>
+            </div>
+
+            <label for="about-me">About me</label>
+            <textarea id="about-me" name="about-me"></textarea>
+
+            <div class="button-group">
+                <button type="reset" class="reset-button">RESET</button>
+                <button type="button" class="submit-button" id="submit-button">OK</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function () {
+            document.getElementById('form-title').textContent = 'Ми вдячні вам';
+        });
+    </script>
+</body>
+
+</html>
