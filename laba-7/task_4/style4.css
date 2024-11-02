@@ -1,0 +1,94 @@
+  /* Стилі для фіксованої навігаційної панелі */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 135px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    left: 100%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgb(90, 51, 39);
+}
+
+/* Вирівнювання останнього елемента справа */
+.navbar .right {
+    margin-left: auto;
+}
+
+.navbar-icons {
+    display: flex;
+}
+
+.navbar-icons a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.navbar-icons a i {
+    font-size: 24px;
+    color: white;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+/* Стилі для фіксованої вертикальної панелі */
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #370e0e;
+    padding-top: 20px;
+}
+
+.vertical-nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.vertical-nav a:hover {
+    background-color: #300c0c;
+}
+
+/* Стилі для іконок та тексту */
+.vertical-nav .menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-nav .menu-item i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+/* Стилі для вкладеного меню */
+.vertical-nav .submenu {
+    display: none;
+    background-color: #231010;
+}
+
+.vertical-nav .submenu a {
+    padding-left: 30px;
+}
+
+.vertical-nav a.active+.submenu {
+    display: block;
+}
