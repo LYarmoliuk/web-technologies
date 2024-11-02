@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.block {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+/* Розміри блоків */
+.large {
+    width: 200px;
+    height: 100px;
+    display: none; /* Спочатку невидимий */
+}
+
+.medium {
+    width: 150px;
+    height: 80px;
+    display: none; /* Спочатку невидимий */
+}
+
+.small {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Колір блоків */
+.green {
+    background-color: rgb(71, 15, 15);
+}
+
+.blue {
+    background-color: rgb(47, 12, 12);
+}
+
+/* Показувати блоки 2.1 і 2.2 при наведенні на блоки 1.1 і 1.2 */
+#block-1-1:hover ~ #block-2-1 {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+#block-1-2:hover ~ #block-2-2 {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 120px;
+}
