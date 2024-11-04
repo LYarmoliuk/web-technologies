@@ -1,0 +1,316 @@
+*{
+        margin: 0;
+    }
+    .main{
+        margin: 0;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        min-height: 90px;
+    }
+    .logo{
+        width: 94px;
+        height: auto;
+    }
+    .logo>img{
+        width: 140%;
+        height: auto;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .menu>ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        
+    }
+    li{
+        list-style: none;
+        font-weight: 600;
+        color: rgb(82, 82, 82);
+        margin-left: 8px;
+        font-size: 15px;
+    }
+    .menu>.button{
+        padding: 15px 15px;
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: none;
+    }
+    .menu>.button:hover{
+        background-color: rgb(255, 92, 92);
+    }
+    
+    .menu>.button>span{
+        height: 2px;
+        width: 20px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        margin:  9px 0;
+    }
+
+    .menu>.button>span::before{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        margin-top: -7px;
+        background-color: rgb(255, 255, 255);
+    }
+    .menu>.button>span::after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        margin-top: 7px;
+        background-color: rgb(255, 255, 255);
+    }
+
+
+    .title{
+        background-color: rgb(195, 255, 255);
+        padding: 50px 10%;
+        margin: 0;
+        color: rgb(82, 82, 82);
+  
+    }
+    .title p{
+        font-size: 30px;
+        margin: 20px;
+    }
+    .title p:nth-child(2){
+        font-size: 18px;
+    }
+    .main>div{
+        padding: 50px 10%;
+    }
+    .content-title{
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .works-content>.content-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .content-title>.title-text{
+        display: flex;
+    }
+    .content-title>.title-text>p{
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(82, 82, 82);
+    }
+    .content-title>.sub-text>p{
+        font-size: 15px;
+        color: rgb(82, 82, 82);
+        margin-top: 10px;
+    }
+    .content-title>.title-text>p:nth-child(2){
+        margin: 0 10px;
+        color: rgb(255, 0, 0);
+        letter-spacing: 2px;
+    }
+    .button{
+        padding: 10px 20px;
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    .button:hover{
+        background-color: rgb(255, 92, 92);
+    }
+    .works-content>.images{
+        display: flex;
+        flex-wrap: wrap;     
+        gap: 20px;
+        }
+  
+            
+    .works-content>.images img {
+        flex: 1 1 30%;
+        width: 30%;
+        height: auto;
+    }
+   
+    
+
+    .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .contact>p{
+        font-size: 20px;
+        color: rgb(82, 82, 82);
+    }
+    
+    .contact>*{
+        margin: 10px;
+    }
+    .we-do-content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;     
+        gap: 20px;
+    }
+    .we-do-content>.item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        flex: 1 1 0%;
+    }
+    .we-do-content>.item img {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .we-do-content>.item>p{
+        text-align: center;
+        color: rgb(82, 82, 82);
+        margin-top: 10px;
+    }
+    .we-do-content>.item>p:nth-child(2){
+        font-weight: 600;
+    }
+
+    .journal-content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+       
+
+    }
+    .journal-item{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        padding-left: 0;
+        flex: 1 1 40%;
+    }
+    .journal-item-content{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        
+    }    
+    .journal-item-img{
+        width: 80%;
+        max-width: 200px;
+        height: auto;
+    }
+    .journal-item-img>img{
+        width: 100%;
+        height: auto;
+    }
+    .journal-item-content>p{
+        margin-bottom: 10px;
+        color: rgb(82, 82, 82);
+    }
+
+    .journal-item-content>p:nth-child(2){
+        font-weight: 600;
+    }
+    .journal-item-content>p:nth-child(1){
+        color: rgb(155, 155, 155);
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .works-content>.images img {
+            flex: 1 1 45%;
+        }
+        .we-do-content>.item {
+
+            flex: 1 1 30%;
+        }
+        .journal-item{
+            flex: 1 1 100%;
+        }
+        .main{
+            margin-top: 90px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+        }
+        .menu>ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            background: white;
+            padding: 20px;
+        }
+        .menu>ul.active {
+            display: flex;
+        }
+        .menu>.button {
+            display: block;
+        }
+
+    }
+    @media screen and (max-width: 576px) {
+        .works-content>.images img {
+            flex: 1 1 100%;
+        }
+        .we-do-content>.item {
+            flex: 1 1 100%;
+        }
+        .journal-item{
+            flex: 1 1 100%;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .journal-item-content{
+            align-items: center;
+        }
+    }
+    footer{
+        background-color: rgb(22, 22, 22);
+        padding: 50px 10%;
+    }
+    footer>div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(255, 255, 255);
+        font-weight: 900;
+    }
+    .social{
+        display: flex;
+        gap: 20px;
+        margin: 20px;
+    }
+    .social>div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social>div>img{
+        width: 40px;
+        height: 40px;
+    }
