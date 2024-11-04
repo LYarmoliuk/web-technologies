@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+}
+.main{
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    min-height: 90px;
+}
+.logo{
+    width: 94px;
+    height: auto;
+}
+.logo>img{
+    width: 140%;
+    height: auto;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.menu>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    
+}
+li{
+    list-style: none;
+    font-weight: 600;
+    color: rgb(82, 82, 82);
+    margin-left: 8px;
+    font-size: 15px;
+}
+.menu>.button{
+    padding: 15px 15px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+}
+.menu>.button:hover{
+    background-color: rgb(255, 92, 92);
+}
+
+.menu>.button>span{
+    height: 2px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin:  9px 0;
+}
+
+.menu>.button>span::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    margin-top: -7px;
+    background-color: rgb(255, 255, 255);
+}
+.menu>.button>span::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    margin-top: 7px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.title{
+    background-color: rgb(195, 255, 255);
+    padding: 50px 10%;
+    margin: 0;
+    color: rgb(82, 82, 82);
+
+}
+.title p{
+    font-size: 30px;
+    margin: 20px;
+}
+.title p:nth-child(2){
+    font-size: 18px;
+}
+.main>div{
+    padding: 50px 10%;
+}
+.content-title{
+    align-items: center;
+    margin-bottom: 20px;
+}
+.works-content>.content-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.content-title>.title-text{
+    display: flex;
+}
+.content-title>.title-text>p{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(82, 82, 82);
+}
+.content-title>.sub-text>p{
+    font-size: 15px;
+    color: rgb(82, 82, 82);
+    margin-top: 10px;
+}
+.content-title>.title-text>p:nth-child(2){
+    margin: 0 10px;
+    color: rgb(255, 0, 0);
+    letter-spacing: 2px;
+}
+.button{
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(255, 92, 92);
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.large {
+    grid-column: span 5;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.contact>p{
+    font-size: 20px;
+    color: rgb(82, 82, 82);
+}
+
+.contact>*{
+    margin: 10px;
+}
