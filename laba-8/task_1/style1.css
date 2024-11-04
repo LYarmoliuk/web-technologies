@@ -1,0 +1,112 @@
+.day{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+.day::before{
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 2px;
+    right: 2.5%;
+    background-color: rgb(184, 184, 184);
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 20px;
+    font-weight: 800;
+    width: 50px;
+
+}
+.temperature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 20px;
+
+}
+.temperature>p{
+    margin: 0;
+}
+.temperature>p:nth-last-child(1){
+    color: rgb(121, 121, 121);
+}
+.pollen{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin: 10px 20px;
+    padding: 9px;
+
+}
+.pollen_placeholder{
+    margin-right: 5px;
+    color: rgb(121, 121, 121);
+}
+.header{
+    height: max-content;
+    padding-bottom: 5px;
+}
+.city{
+    font-weight: 800;
+    font-size: xxx-large;
+    width: 100%;
+    margin: 0;
+    margin-left: 20px;
+}
+.weather-type,
+.date{
+    margin: 0;
+    margin-left: 20px;
+    color: rgb(121, 121, 121);
+}
+.weather{
+    display: flex;
+    height: 140px;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px 20px;
+    max-width: 50%;
+}
+.info>img{
+    height: 80%;
+}
+.info>p{
+    margin: 0;
+}
+.temp-num{
+    font-size: xxx-large;
+    color: rgb(73, 73, 73);
+    
+}
+.temp-unit{
+    font-size: large;
+    padding-top: 10px;
+    color: rgb(121, 121, 121);
+
+}
+
+.advanced-info p{
+    margin: 0;
+}
+
+.advanced-info{
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0px;
+}
+.advanced-info>.item{
+    display: flex;
+    flex-direction: row;
+    margin: 3px 0px;
+}
+.advanced-info>.item>p:nth-child(1){
+    color: rgb(121, 121, 121);
+    margin-right: 5px;
+}
