@@ -20,6 +20,8 @@ function findMinMax(numbers) {
     
     return { min, max };
   }
+
+  console.log("=== Завдання 1 ===");
   
   // Тестування функції findMinMax
   const testArray = [3, 7, 2, 9, 5, 1, 8];
@@ -63,7 +65,8 @@ function findMinMax(numbers) {
   function isInRange(number, min, max) {
     return number >= min && number <= max;
   }
-  
+  console.log("=== Завдання 2 ===");
+
   // Тестування функції isInRange
   console.log("15 в діапазоні [10, 20]:", isInRange(15, 10, 20)); // true
   console.log("5 в діапазоні [10, 20]:", isInRange(5, 10, 20));  // false
@@ -80,9 +83,10 @@ function findMinMax(numbers) {
   console.log("Статус після повторного NOT:", status);
   
   // Завдання 3: Умовні розгалуження
-  
+  console.log("=== Завдання 3.1 ===");
   // Функція, яка повертає словесну оцінку студента (використовуючи if)
   function getGradeTextUsingIf(score) {
+    
     if (score >= 90 && score <= 100) {
       return "відмінно";
     } else if (score >= 75 && score < 90) {
@@ -117,6 +121,8 @@ function findMinMax(numbers) {
   console.log("Оцінка 65 (тернарний):", getGradeTextUsingTernary(65));
   console.log("Оцінка 45 (тернарний):", getGradeTextUsingTernary(45));
   console.log("Оцінка -5 (тернарний):", getGradeTextUsingTernary(-5));
+
+  console.log("=== Завдання 3.2 ===");
   
   // Функція для визначення сезону за місяцем (використовуючи if)
   function getSeasonUsingIf(month) {
