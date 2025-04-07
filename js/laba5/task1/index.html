@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лампочка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Лабораторна робота №5: Робота з лампочкою</h1>
+    
+    <div class="controls">
+        <select id="bulbType">
+            <option value="regular">Звичайна лампочка</option>
+            <option value="energy-saving">Енергозберігаюча лампочка</option>
+            <option value="led">Світлодіодна лампочка</option>
+        </select>
+        
+        <button id="toggleButton">Включити</button>
+        <button id="brightnessButton">Змінити яскравість</button>
+    </div>
+    
+    <div class="bulb-container">
+        <div>
+            <div id="bulb" class="bulb"></div>
+            <div class="bulb-base"></div>
+        </div>
+    </div>
+    
+    <div class="info">
+        <p>Тип лампочки: <span id="currentType">Звичайна лампочка</span></p>
+        <p>Стан: <span id="currentState">Вимкнено</span></p>
+        <p>Яскравість: <span id="currentBrightness">100%</span></p>
+        <p class="timer">Автоматичне вимкнення через: <span id="timer">5:00</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

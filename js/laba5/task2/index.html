@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світлофор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Лабораторна робота №5: Світлофор</h1>
+    
+    <div class="traffic-light-container">
+        <div class="traffic-light">
+            <div class="light red" id="redLight"></div>
+            <div class="light yellow" id="yellowLight"></div>
+            <div class="light green" id="greenLight"></div>
+        </div>
+        
+        <div class="status-container">
+            <p>Поточний сигнал: <span id="currentStatus">червоний</span></p>
+            <p>Залишилось часу: <span id="timeLeft">5</span> секунд</p>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="startButton">Запустити світлофор</button>
+        <button id="stopButton" disabled>Зупинити світлофор</button>
+        <button id="nextButton">Перемкнути вручну</button>
+        <button id="settingsButton">Налаштування часу</button>
+    </div>
+    
+    <div class="settings">
+        <div class="setting">
+            <label for="redDuration">Тривалість червоного світла (секунди):</label>
+            <input type="number" id="redDuration" min="1" max="20" value="5">
+        </div>
+        <div class="setting">
+            <label for="yellowDuration">Тривалість жовтого світла (секунди):</label>
+            <input type="number" id="yellowDuration" min="1" max="20" value="3">
+        </div>
+        <div class="setting">
+            <label for="greenDuration">Тривалість зеленого світла (секунди):</label>
+            <input type="number" id="greenDuration" min="1" max="20" value="7">
+        </div>
+        <div class="setting">
+            <label for="blinkCount">Кількість миготінь жовтого:</label>
+            <input type="number" id="blinkCount" min="1" max="10" value="3">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

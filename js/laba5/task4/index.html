@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Облік продуктів інтернет-магазину</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Система обліку продуктів інтернет-магазину</h1>
+        
+        <!-- Форма додавання/редагування продукту -->
+        <section class="section">
+            <h2>Додати/Оновити продукт</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id" value="">
+                <div class="form-group">
+                    <label for="product-name">Назва продукту:</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Ціна (грн):</label>
+                    <input type="number" id="product-price" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Кількість на складі:</label>
+                    <input type="number" id="product-quantity" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Категорія:</label>
+                    <input type="text" id="product-category">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="save-product">Зберегти</button>
+                    <button type="button" id="cancel-edit" style="display: none;">Скасувати редагування</button>
+                </div>
+            </form>
+        </section>
+        
+        <!-- Пошук продукту -->
+        <section class="section">
+            <h2>Пошук продукту</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Введіть назву продукту...">
+                <button id="search-button">Пошук</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </section>
+        
+        <!-- Список продуктів -->
+        <section class="section">
+            <h2>Каталог продуктів</h2>
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Назва</th>
+                        <th>Ціна (грн)</th>
+                        <th>Кількість</th>
+                        <th>Категорія</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list"></tbody>
+            </table>
+        </section>
+        
+        <!-- Створення замовлення -->
+        <section class="section">
+            <h2>Створити замовлення</h2>
+            <div class="order-form">
+                <div class="form-group">
+                    <label for="order-product">Продукт:</label>
+                    <select id="order-product"></select>
+                </div>
+                <div class="form-group">
+                    <label for="order-quantity">Кількість:</label>
+                    <input type="number" id="order-quantity" min="1" value="1">
+                </div>
+                <button id="add-to-order">Додати до замовлення</button>
+            </div>
+            
+            <h3>Поточне замовлення</h3>
+            <table id="order-table">
+                <thead>
+                    <tr>
+                        <th>Продукт</th>
+                        <th>Ціна (грн)</th>
+                        <th>Кількість</th>
+                        <th>Сума (грн)</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody id="order-items"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Загальна сума:</td>
+                        <td id="order-total">0.00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="submit-order" class="submit-order">Оформити замовлення</button>
+        </section>
+        
+        <!-- Історія замовлень -->
+        <section class="section">
+            <h2>Історія замовлень</h2>
+            <div id="orders-history"></div>
+        </section>
+        
+        <!-- Додаткова інформація про використання структур даних -->
+        <section class="section info-section">
+            <h2>Інформація про використання структур даних</h2>
+            <ul>
+                <li><strong>Map</strong> - зберігає продукти (ключ: ID продукту, значення: об'єкт продукту)</li>
+                <li><strong>Set</strong> - зберігає унікальні категорії продуктів</li>
+                <li><strong>WeakMap</strong> - відстежує історію змін продуктів (ключ: об'єкт продукту, значення: масив змін)</li>
+                <li><strong>WeakSet</strong> - зберігає видалені продукти для потенційного відновлення</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

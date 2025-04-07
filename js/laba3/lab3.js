@@ -75,5 +75,5 @@ function task6(a, b) {
 }
 
 task6(7, 3);
-task6(15, 5);
+//task6(15, 5);
 task6(6, 2);

@@ -56,8 +56,8 @@ function findMinMax(numbers) {
   const object4 = { a: 1, b: 2, c: 4 };
   
   console.log("Порівняння object1 і object2:", compareObjects(object1, object2)); 
-  console.log("Порівняння object1 і object3:", compareObjects(object1, object3)); 
-  console.log("Порівняння object1 і object4:", compareObjects(object1, object4)); 
+  //console.log("Порівняння object1 і object3:", compareObjects(object1, object3)); 
+  //console.log("Порівняння object1 і object4:", compareObjects(object1, object4)); 
   // Завдання 2: Логічні оператори
   
  
