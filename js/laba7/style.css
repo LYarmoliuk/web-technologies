@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/main-background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#status {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#character {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 43px;
+    height: 73px;
+    background: url('images/gunman.png') no-repeat;
+    background-size: 468px 365px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#start-button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #FF4500;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover {
+    background-color: #e03e00;
+}
