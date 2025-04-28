@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Pair Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="settings">
+    <h2>Налаштування гри</h2>
+    
+    <label>Гравці:
+      <select id="playersSelect">
+        <option value="1">1 гравець</option>
+        <option value="2">2 гравці</option>
+      </select>
+    </label>
+    
+    <div id="playerNames">
+      <input type="text" id="player1" placeholder="Ім'я гравця 1" />
+      <input type="text" id="player2" placeholder="Ім'я гравця 2" style="display:none;" />
+    </div>
+
+    <label>Розмір поля:
+      <select id="gridSize">
+        <option value="4x4">4x4</option>
+        <option value="4x5">4x5</option>
+        <option value="5x6">5x6</option>
+      </select>
+    </label>
+
+    <label>Складність:
+      <select id="difficulty">
+        <option value="easy">Easy (3 хв)</option>
+        <option value="normal">Normal (2 хв)</option>
+        <option value="hard">Hard (1 хв)</option>
+      </select>
+    </label>
+
+    <label>Кількість раундів:
+      <input type="number" id="roundsInput" min="1" value="1" />
+    </label>
+
+    <div class="buttons">
+      <button id="startButton">Розпочати гру</button>
+      <button id="resetSettings">Скинути налаштування</button>
+      <button id="restartButton" style="display:none;">Рестарт</button>
+    </div>
+  </div>
+
+  <div class="game-info" id="gameInfo" style="display:none;">
+    <p>Таймер: <span id="timer">0:00</span></p>
+    <p>Ходи: <span id="moves">0</span></p>
+    <p>Гравець: <span id="currentPlayerName"></span></p>
+  </div>
+
+  <div class="game-board" id="gameBoard"></div>
+
+  <div id="result" style="display:none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .kanban-board {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .kanban-column {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .kanban-column h2 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .task {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: grab;
+    user-select: none;
+    transition: background 0.3s;
+  }
+  
+  .task:hover {
+    background: #0056b3;
+  }
+  
+  .task.dragging {
+    opacity: 0.5;
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 800px) {
+    .kanban-board {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
