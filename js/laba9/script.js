@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Tab switching
+    // Перемикання вкладок
     const loginTab = document.getElementById('loginTab');
     const registerTab = document.getElementById('registerTab');
     const loginForm = document.getElementById('loginForm');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginForm.classList.remove('active');
     });
 
-    // Toggle password visibility
+    // Перемикання видимості пароля
     const togglePasswordButtons = document.querySelectorAll('.toggle-password');
     togglePasswordButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Country and city selection
+    // Вибір країни та міста
     const countrySelect = document.getElementById('country');
     const citySelect = document.getElementById('city');
 
@@ -55,11 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     countrySelect.addEventListener('change', function() {
         const country = this.value;
-        
-        // Clear city select
+
+        // Очистити випадаючий список міст
         citySelect.innerHTML = '<option value="">Select City</option>';
-        
-        // Populate cities based on selected country
+
+        // Заповнити список міст залежно від вибраної країни
         if (country) {
             citySelect.disabled = false;
             cities[country].forEach(city => {
@@ -73,16 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close success message
+    // Закриття повідомлення про успішну реєстрацію
     closeSuccessMessage.addEventListener('click', function() {
         successMessage.style.display = 'none';
     });
 
-    // Form validation
+    // Валідація форм
     const loginFormElement = document.getElementById('login');
     const registerFormElement = document.getElementById('register');
 
-    // Validation functions
+    // Функції валідації
     function showError(input, message) {
         const formGroup = input.parentElement.classList.contains('password-container') 
             ? input.parentElement.parentElement 
@@ -165,21 +165,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkAge(input) {
         const today = new Date();
         const birthDate = new Date(input.value);
-        
-        // Check if date is in future
+
+        // Перевірка, чи дата не з майбутнього
         if (birthDate > today) {
             showError(input, 'Дата народження не може бути в майбутньому');
             return false;
         }
-        
-        // Calculate age
+
+        // Обчислення віку
         let age = today.getFullYear() - birthDate.getFullYear();
         const monthDiff = today.getMonth() - birthDate.getMonth();
-        
+
         if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
-        
+
         if (age < 12) {
             showError(input, 'Вам має бути не менше 12 років для реєстрації');
             return false;
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 isChecked = true;
             }
         });
-        
+
         if (!isChecked) {
             errorElement.textContent = 'Виберіть одне з значень';
             return false;
@@ -216,29 +216,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Login form validation
+    // Валідація форми авторизації
     loginFormElement.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         const username = document.getElementById('username');
         const password = document.getElementById('login-password');
-        
+
         let isValid = true;
-        
-        // Check required fields
+
+        // Перевірка обов’язкових полів
         isValid = checkRequired([username, password]) && isValid;
-        
-        // Check password length
+
+        // Перевірка довжини пароля
         if (password.value.trim() !== '') {
             isValid = checkLength(password, 6, 30) && isValid;
         }
-        
+
         if (isValid) {
-            // Form is valid, show success message (for demo purposes)
+            // Форма валідна, виводимо повідомлення (для демонстрації)
             alert("Успішна авторизація!");
             loginFormElement.reset();
-            
-            // Reset validation styling
+
+            // Скидаємо стилі валідації
             const formControls = loginFormElement.querySelectorAll('.form-control');
             formControls.forEach(input => {
                 input.classList.remove('valid');
@@ -247,10 +247,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Registration form validation
+    // Валідація форми реєстрації
     registerFormElement.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         const firstName = document.getElementById('firstName');
         const lastName = document.getElementById('lastName');
         const email = document.getElementById('email');
@@ -262,54 +262,54 @@ document.addEventListener('DOMContentLoaded', function() {
         const sexErrorElement = document.querySelector('input[name="sex"]').parentElement.querySelector('.error-message');
         const country = document.getElementById('country');
         const city = document.getElementById('city');
-        
+
         let isValid = true;
-        
-        // Check required fields
+
+        // Перевірка обов’язкових полів
         isValid = checkRequired([firstName, lastName, email, password, confirmPassword, phone, dateOfBirth, country, city]) && isValid;
-        
-        // Check name lengths
+
+        // Перевірка довжини імені
         if (firstName.value.trim() !== '') {
             isValid = checkLength(firstName, 3, 15) && isValid;
         }
-        
+
         if (lastName.value.trim() !== '') {
             isValid = checkLength(lastName, 3, 15) && isValid;
         }
-        
-        // Check email
+
+        // Перевірка email
         if (email.value.trim() !== '') {
             isValid = checkEmail(email) && isValid;
         }
-        
-        // Check password length
+
+        // Перевірка довжини пароля
         if (password.value.trim() !== '') {
             isValid = checkLength(password, 6, 30) && isValid;
         }
-        
-        // Check passwords match
+
+        // Перевірка, чи паролі співпадають
         if (password.value.trim() !== '' && confirmPassword.value.trim() !== '') {
             isValid = checkPasswordsMatch(password, confirmPassword) && isValid;
         }
-        
-        // Check phone
+
+        // Перевірка телефону
         if (phone.value.trim() !== '') {
             isValid = checkPhone(phone) && isValid;
         }
-        
-        // Check date of birth
+
+        // Перевірка дати народження
         if (dateOfBirth.value !== '') {
             isValid = checkAge(dateOfBirth) && isValid;
         }
-        
-        // Check sex radio
+
+        // Перевірка радіо-кнопок
         isValid = checkRadio(sexRadios, sexErrorElement) && isValid;
-        
-        // Check country and city
+
+        // Перевірка країни і міста
         if (country.value !== '') {
             isValid = checkSelect(country) && isValid;
         }
-        
+
         if (!country.value) {
             showError(city, 'Спочатку виберіть країну');
             isValid = false;
@@ -319,23 +319,23 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             showSuccess(city);
         }
-        
+
         if (isValid) {
-            // Form is valid, show success message
+            // Форма валідна, показуємо повідомлення про успішну реєстрацію
             successMessage.style.display = 'block';
             registerFormElement.reset();
-            
-            // Reset validation styling
+
+            // Скидаємо стилі валідації
             const formControls = registerFormElement.querySelectorAll('.form-control');
             formControls.forEach(input => {
                 input.classList.remove('valid');
                 input.classList.remove('invalid');
             });
-            
-            // Reset sex error message
+
+            // Очищення повідомлення про помилку статі
             sexErrorElement.textContent = '';
-            
-            // Reset city select
+
+            // Скидання списку міст
             city.innerHTML = '<option value="">Select City</option>';
             city.disabled = true;
         }

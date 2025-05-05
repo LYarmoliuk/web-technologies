@@ -1,4 +1,4 @@
-// Конфігурація слайдера
+
 const config = {
     images: [
       'https://picsum.photos/id/1018/800/400',
